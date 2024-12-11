@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import Modal from "react-modal"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import reportWebVitals from "./reportWebVitals"
 import "./styles/index.scss"
 import Home from "./pages/Home"
@@ -24,6 +24,7 @@ root.render(
             <Route path="/competences" element={<Competences />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>
         <Footer />
