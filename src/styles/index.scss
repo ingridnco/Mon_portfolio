@@ -392,18 +392,17 @@ ul {
 
 .seeCode{
   position: relative;
-  top: -25px; 
-  left: 30%;
-  transform: translateX(-50%);
+  top: -2px; 
   background-color: #000;
   color: #fff;
   padding: 5px 10px;
+  margin:5px;
   border-radius: 5px;
   font-size: 14px;
   white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  &:hover{
+    background-color: #705edb;
+  }
 }
 /************Collapse****************/
 .Collapse {
@@ -657,11 +656,6 @@ ul {
     font-size: 18px;
   }
 
-  .seeCode {
-    position: relative;
-    top: 4px;
-    left: 18%;
-  }
 /***************Page contact******************/
 .contact_text {
   top: 51px;

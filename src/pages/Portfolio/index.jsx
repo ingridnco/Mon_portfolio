@@ -66,22 +66,20 @@ const CardWrapper = () => {
         textDecoration: "none",
         transition: "color 0.3s",
         position: "relative",
-      }}
-      onMouseEnter={e => {
-        const tooltip = e.target.nextElementSibling;
-        tooltip.style.opacity = "1";
-        tooltip.style.visibility = "visible";
-      }}
-      onMouseLeave={e => {
-        const tooltip = e.target.nextElementSibling;
-        tooltip.style.opacity = "0";
-        tooltip.style.visibility = "hidden";
       }}>
       {selectedCard.title}
     </Link>
-    <span className="seeCode">
+    <Link
+      to={selectedCard.lien}
+      target="_blank"
+      style={{
+        color: "#fff",
+        textDecoration: "none",
+      }}
+      className="seeCode"
+    >
       Voir le code
-    </span>
+    </Link>
   </div>
           <SlideShow pictures={selectedCard.pictures} />
           <div className="modal__description">
