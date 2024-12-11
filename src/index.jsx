@@ -15,7 +15,7 @@ Modal.setAppElement("#root")
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/mon_portfolio">
       <div className="main-container">
         <Header />
         <div className="content">

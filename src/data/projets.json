@@ -1,13 +1,13 @@
 [
   {
-    "imgSrc": "booki.webp",
+    "imgSrc": "%PUBLIC_URL%/assets/booki.webp",
     "title": "Booki",
     "description": "Agence de voyage",
-    "skills": ["htmlLogo.webp", "cssLogo.webp"],
+    "skills": ["%PUBLIC_URL%/assets/htmlLogo.webp", "%PUBLIC_URL%/assets/cssLogo.webp"],
     "pictures": [
-  "booki_image1.webp",
-  "booki_image2.webp",
-  "booki_image3.webp"
+  "%PUBLIC_URL%/assets/booki_image1.webp",
+  "%PUBLIC_URL%/assets/booki_image2.webp",
+  "%PUBLIC_URL%/assets/booki_image3.webp"
 ],
     "paragraphe": "Ce projet m'a permis d'implémenter une interface responsive en utilisant HTML et CSS, de manière à assurer une expérience utilisateur optimale sur différents appareils. J'ai également acquis la compétence d'intégrer du contenu de façon précise et conforme à une maquette, renforçant ainsi mon souci du détail. Par ailleurs, j'ai appris à versionner mon travail efficacement grâce à Git et GitHub, ce qui m'a permis de collaborer et de gérer les modifications de code de manière structurée. Enfin, j'ai installé et configuré un environnement de développement front-end, consolidant mes bases techniques pour initier et gérer des projets web.",
     "lien": "https://github.com/ingridnco/Booki"
