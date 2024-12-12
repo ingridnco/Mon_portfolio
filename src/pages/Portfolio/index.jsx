@@ -57,30 +57,29 @@ const Folio = () => {
             },
           }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}>
-    <Link
-      to={selectedCard.lien}
-      target="_blank"
-      style={{
-        color: "#fff",
-        fontSize: "24px",
-        textDecoration: "none",
-        transition: "color 0.3s",
-        position: "relative",
-      }}>
-      {selectedCard.title}
-    </Link>
-    <Link
-      to={selectedCard.lien}
-      target="_blank"
-      style={{
-        color: "#fff",
-        textDecoration: "none",
-      }}
-      className="seeCode"
-    >
-      Voir le code
-    </Link>
-  </div>
+            <Link
+              to={selectedCard.lien}
+              target="_blank"
+              style={{
+                color: "#fff",
+                fontSize: "24px",
+                textDecoration: "none",
+                transition: "color 0.3s",
+                position: "relative",
+              }}>
+              {selectedCard.title}
+            </Link>
+            <Link
+              to={selectedCard.lien}
+              target="_blank"
+              style={{
+                color: "#fff",
+                textDecoration: "none",
+              }}
+              className="seeCode">
+              Voir le code
+            </Link>
+          </div>
           <SlideShow pictures={selectedCard.pictures} />
           <div className="modal__description">
             <Collapse title="Détails" content={selectedCard.paragraphe} />

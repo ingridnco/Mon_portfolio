@@ -23,7 +23,7 @@ const SlideShow = ({ pictures }) => {
             <img className="SlideShow__arrows" src={BW_arrow} alt="Précédente" />
           </div>
           <div className="SlideShow__right" onClick={handleNextImage}>
-            <img className="SlideShow__arrows" src={FW_arrow} alt="Suivante"  />
+            <img className="SlideShow__arrows" src={FW_arrow} alt="Suivante" />
           </div>
         </>
       )}
