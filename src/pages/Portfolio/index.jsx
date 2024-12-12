@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 
 Modal.setAppElement("#root")
 
-const CardWrapper = () => {
+const Folio = () => {
   const [cards, setCards] = useState([])
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedCard, setSelectedCard] = useState(null)
@@ -30,7 +30,7 @@ const CardWrapper = () => {
 
   return (
     <div className="main flexwrap">
-      <div className="card-wrapper">
+      <div className="card__wrapper">
         {cards.map((card, index) => (
           <Card key={index} imgSrc={card.imgSrc} title={card.title} skills={card.skills} description={card.description} onCardClick={() => openModal(card)} />
         ))}
@@ -94,4 +94,4 @@ const CardWrapper = () => {
   )
 }
 
-export default CardWrapper
+export default Folio

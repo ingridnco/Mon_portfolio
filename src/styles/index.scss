@@ -2,12 +2,14 @@
 
 /************variables***********/
 $black: #000;
-$header: #70597a;
+$violet: #70597a;
 $white: #fff;
-$gray-light: #f6f6f6;
-$red: #ff6060;
-$filter: rgba(0, 0, 0, 0.5);
-$shadow: rgba(0, 0, 0, 0.3);
+$orange:#f1aa69;
+$med-orange:#ffcea1;
+$light-orange:#ffe9d4;
+$purple:#705edb;
+$light-purple:#6a72ae;
+
 
 /***************mixins**********************/
 
@@ -27,25 +29,27 @@ $shadow: rgba(0, 0, 0, 0.3);
   border-radius: $radius;
 }
 
-@mixin banner-filter-position {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 230px;
-  z-index: 2;
-  @include border-radius;
+@mixin text-block{
+  border-radius: 20px;
+  box-shadow: 3px 2px 5px #575860;
+  font-size: 20px;
+  line-height: 1.3em;
+  width: 40vw;
+  height: fit-content;
+  padding: 30px;
+  position: relative;
 }
 
-// si besoin de colorer les côtés du SlideShow, activer le background-color
+//colore les côtés du SlideShow
 @mixin SlideShow-sides {
   @include flex-center;
   width: 42px;
   height: 419px;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.07);
   z-index: 2;
   top: -1px;
+  cursor: pointer;
 }
 
 /************************************************************************************/
@@ -62,17 +66,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+// }
 
-ul {
-  padding: 0;
-}
+// ul {
+//   padding: 0;
+// }
 
-.no_list_style {
-  list-style: none;
-}
+// .no_list_style {
+//   list-style: none;
+// }
 
 .main-container {
   display: flex;
@@ -86,7 +90,7 @@ ul {
 /****************************************Page Home*************************************/
 .Header {
   padding: 5px 0;
-  background-color: #70597a;
+  background-color: $violet;
   @include flex-space-between;
   width: auto;
   &__logo {
@@ -100,30 +104,25 @@ ul {
   }
   &__link {
     font-size: 1.2em;
-    font-weight: 400;
     padding: 15px;
     margin-right: 10px;
-    background: linear-gradient(#ffe9d4, #6a72ae);
+    background: linear-gradient($light-orange, $light-purple);
     border-radius: 40px;
     color: $black;
     text-decoration: none;
     &:hover {
-      //background: linear-gradient(#705edb, #575860);
       transition-duration: 0.3s;
       transform: scale(1.1);
       text-shadow: 2px 2px 5px rgba(61, 29, 120, 0.915);
-      // text-decoration: underline;
     }
     &.active {
-      // transform: rotateY(20deg) translate(0px, 5px);
-      // transition-duration: 0.05s;
-      background: linear-gradient(#f1aa69, #705edb);
+      background: linear-gradient($orange, $purple);
     }
   }
 }
 
 .link_2nd-color {
-  background: linear-gradient(#ffcea1, #6a72ae);
+  background: linear-gradient($med-orange, $light-purple);
 }
 
 .main {
@@ -139,7 +138,7 @@ ul {
   float: right;
   margin: 40px 80px;
   border-radius: 50%;
-  box-shadow: 3px 3px 15px #705edb;
+  box-shadow: 3px 3px 15px $purple;
   &:hover {
     transform: scale(1.15);
     transition-duration: 2s;
@@ -147,30 +146,18 @@ ul {
 }
 
 .presentation-text {
-  background-color: #ffe9d4;
-  border-radius: 20px;
-  box-shadow: 3px 2px 5px #575860;
-  font-size: 20px;
-  line-height: 1.3em;
-  width: 40vw;
-  height: fit-content;
-  padding: 30px;
-  position: relative;
+  background-color: $light-orange;
+  @include text-block;
   top: 210px;
   left: 18vw;
 }
 
 .Footer {
   @include flex-center;
-  width: 98.9vw;
-  background-color: $header;
+  background-color: $violet;
   color: $white;
   text-shadow: 2px 2px 5px rgba(61, 29, 120, 0.915);
   padding: 8px 0 8px 0;
-  & img {
-    padding-top: 50px;
-    width: 8vw;
-  }
   & p {
     font-size: 18px;
     margin: 10px;
@@ -208,7 +195,6 @@ ul {
 .skill-logo {
   width: 60px;
   height: 60px;
-  object-fit: contain;
   margin-bottom: 10px;
 }
 .skill-title {
@@ -229,14 +215,11 @@ ul {
 
 .flexwrap {
   @include flex-space-between;
-  flex-wrap: wrap;
-  gap: 30px;
 }
 
 .card {
   margin: 20px 10px;
   --gradient: #f5e7da, #f1aa69, #8d7ee3;
-
   background-image: linear-gradient(var(--gradient), #b9b1e6 max(250px));
   border-radius: 1rem;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
@@ -247,6 +230,13 @@ ul {
   margin: 0 30px;
   text-decoration: none;
   cursor: pointer;
+  &__wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 80px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
   &__logos {
     display: flex;
     gap: 10px;
@@ -259,7 +249,7 @@ ul {
   }
   &:hover {
     transform: scale(1.1);
-    background-color: #fff;
+    background-color: $white;
     transition: ease-in 0.3s;
     background-image: none;
   }
@@ -287,18 +277,9 @@ ul {
   }
 }
 
-.card-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin: 30px 80px;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
 .SlideShow {
   position: relative;
-  background-color: #ffe9d4;
+  background-color: $light-orange;
   top: 0px;
   right: -10px;
   height: 418px;
@@ -316,7 +297,6 @@ ul {
     left: 0px;
   }
   &__arrows {
-    cursor: pointer;
     width: 40%;
   }
   &__pics {
@@ -368,12 +348,12 @@ ul {
   background: none;
   border: none;
   font-size: 20px;
-  color: #f1aa69;
+  color: $orange;
   cursor: pointer;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #705edb;
+    color: $purple;
   }
 }
 
@@ -393,24 +373,24 @@ ul {
 .seeCode{
   position: relative;
   top: -2px; 
-  background-color: #000;
-  color: #fff;
+  background-color: $black;
+  color: $white;
   padding: 5px 10px;
   margin:5px;
   border-radius: 5px;
   font-size: 14px;
   white-space: nowrap;
   &:hover{
-    background-color: #705edb;
+    background-color: $purple;
   }
 }
 /************Collapse****************/
 .Collapse {
   position: relative;
   z-index: 2;
-  background-color: #705edb;
+  background-color: $purple;
   width: 100%;
-  color: black;
+  color: $black;
   font-size: 20px;
   font-weight: 600;
   @include flex-space-between;
@@ -472,17 +452,9 @@ ul {
 
 /*****************************************Page Contact**************************************/
 .contact_text {
-  background-color: #ffcea1;
-  border-radius: 20px;
-  box-shadow: 3px 2px 5px #575860;
-  font-size: 20px;
-  line-height: 1.3em;
-  width: 40vw;
-  height: fit-content;
-  padding: 30px;
-  position: relative;
+  background-color: $med-orange;
+  @include text-block;
   text-align: center;
-  margin: 0;
   top: 150px;
   left: (50vw - 21vw);
 }
@@ -565,14 +537,14 @@ ul {
     position: relative;
     top: -18px;
     left: 0vw;
+    font-size: 18px;
   }
 
   .card {
     width: 100%;
     margin: 0 0px;
     max-width: none;
-    &-wrapper {
-      width: 100%;
+    &__wrapper {
       padding: 0;
       gap: 25px;
       margin: 30px 30px;
@@ -591,17 +563,11 @@ ul {
   }
 
   .Footer {
-    width: 100.5vw;
-    left: -30px;
-    & img {
-      width: 25vw;
-    }
     & p {
-      margin-top: 20px;
+      margin: 20px 0;
       font-size: 20px;
       width: 190px;
       text-align: center;
-      padding-bottom: 50px;
     }
   }
 

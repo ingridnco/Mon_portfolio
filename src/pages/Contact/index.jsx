@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import Mail from "../../assets/mail.webp"
 
-const About = () => {
+const Contact = () => {
   return (
     <>
       <main className="main">
@@ -19,4 +19,4 @@ const About = () => {
     </>
   )
 }
-export default About
+export default Contact

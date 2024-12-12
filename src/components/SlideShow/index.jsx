@@ -19,11 +19,11 @@ const SlideShow = ({ pictures }) => {
     <section className="SlideShow">
       {totalImages > 1 && (
         <>
-          <div className="SlideShow__left">
-            <img className="SlideShow__arrows" src={BW_arrow} alt="Précédente" onClick={handlePrevImage} />
+          <div className="SlideShow__left" onClick={handlePrevImage}>
+            <img className="SlideShow__arrows" src={BW_arrow} alt="Précédente" />
           </div>
-          <div className="SlideShow__right">
-            <img className="SlideShow__arrows" src={FW_arrow} alt="Suivante" onClick={handleNextImage} />
+          <div className="SlideShow__right" onClick={handleNextImage}>
+            <img className="SlideShow__arrows" src={FW_arrow} alt="Suivante"  />
           </div>
         </>
       )}
