@@ -209,13 +209,12 @@ body {
   width: 25%;
   transition: background-image 0.3s ease; // Ajoute une transition fluide
   max-width: 20em;
-  margin: 0 30px;
   text-decoration: none;
   cursor: pointer;
   &__wrapper {
     display: flex;
     justify-content: center;
-    margin: 30px 80px;
+    margin: 30px 50px;
     flex-wrap: wrap;
     gap: 30px;
   }
