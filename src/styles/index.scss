@@ -120,10 +120,10 @@ body {
 }
 
 .headTitle {
-  margin-left: 20px;
+  padding: 50px 0 0 75px;
   margin: 0;
   font-family: cursive;
-  color: transparent;
+  color:$light-purple;
 }
 .profile_IS {
   width: 20vw;
@@ -518,7 +518,8 @@ body {
     width: 100%;
   }
   .headTitle {
-    font-size: 1px;
+    font-size: 20px;
+    padding: 20px 0 0 0;
   }
   .profile_IS {
     width: 200px;
