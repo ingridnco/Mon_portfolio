@@ -31,7 +31,7 @@ $light-purple: #6a72ae;
 @mixin text-block {
   border-radius: 20px;
   box-shadow: 3px 2px 5px #575860;
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 1.3em;
   width: 40vw;
   height: fit-content;
@@ -54,6 +54,10 @@ $light-purple: #6a72ae;
 /************************************************************************************/
 /************************************************************************************/
 /************************************************************************************/
+html {
+  //html ajouté pour que rem marche avec le font-size (ne marche pas avec body)
+  font-size: 16px;
+}
 
 body {
   box-sizing: border-box;
@@ -119,17 +123,24 @@ body {
   margin: 0;
 }
 
+.home-wrapper {
+  @include flex-center;
+  flex-direction: column;
+}
+
 .headTitle {
-  padding: 50px 0 0 75px;
   margin: 0;
+  color: $light-purple;
   font-family: cursive;
-  color:$light-purple;
+  position: relative;
+  top: 7vh;
+  left: -14vw;
 }
 .profile_IS {
   width: 20vw;
   position: relative;
-  left: -100px;
-  float: right;
+  right: -30vw;
+  top: -35px;
   margin: 40px 80px;
   border-radius: 50%;
   box-shadow: 3px 3px 15px $purple;
@@ -142,8 +153,8 @@ body {
 .presentation-text {
   background-color: $light-orange;
   @include text-block;
-  top: 210px;
-  left: 18vw;
+  top: -26vh;
+  left: -10vw;
 }
 
 /*******************************Page Competences***********************/
@@ -152,7 +163,7 @@ body {
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
-  padding: 130px 245px;
+  padding: 130px 225px;
   text-align: center;
   & :hover {
     transform: scale(1.15);
@@ -169,7 +180,7 @@ body {
   align-items: center;
   width: 150px;
   background-color: rgba(255, 255, 255);
-  padding: 15px;
+  padding: 12px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -307,7 +318,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   color: $white;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
@@ -328,7 +339,7 @@ body {
   right: 10px;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 1.2rem;
   color: $orange;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -343,9 +354,9 @@ body {
   //overflow-y: auto; // Scrollbar uniquement si le contenu déborde
   max-height: 400px; // Limite la hauteur visible
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 1.1rem;
   &__link {
-    font-size: 24px;
+    font-size: 1.3rem;
     margin: 20px 0;
   }
 }
@@ -358,7 +369,7 @@ body {
   padding: 5px 10px;
   margin: 5px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 0.8rem;
   white-space: nowrap;
   &:hover {
     background-color: $purple;
@@ -371,7 +382,7 @@ body {
   background-color: $purple;
   width: 100%;
   color: $black;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 600;
   @include flex-space-between;
   border-radius: 15px;
@@ -458,7 +469,7 @@ body {
   text-shadow: 2px 2px 5px rgba(61, 29, 120, 0.915);
   padding: 8px 0 8px 0;
   & p {
-    font-size: 18px;
+    font-size: 1.1rem;
     margin: 10px;
   }
 }
@@ -466,6 +477,24 @@ body {
 /******************************************************************************************/
 /*******************************************RESPONSIVE*************************************/
 /******************************************************************************************/
+@media (max-width: 1060px) {
+  .presentation-text {
+    width: 55vw;
+    height: fit-content;
+    padding: 21px;
+    top: -1vh;
+    left: 0vw;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-height: 920px) {
+  .presentation-text {
+    top: -2vh;
+  }
+}
+
 @media (max-width: 768px) {
   * {
     margin: 0;
@@ -507,32 +536,23 @@ body {
   }
 
   /*****************Home*************************/
-  .homePage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .main-container {
     width: 100%;
   }
   .headTitle {
-    font-size: 20px;
+    position: static;
+    font-size: 1.2rem;
     padding: 20px 0 0 0;
   }
   .profile_IS {
     width: 200px;
     float: none;
     left: 0;
+    top: -10px;
   }
   .presentation-text {
     width: 77vw;
-    height: fit-content;
-    padding: 21px;
-    position: relative;
-    top: 0;
-    left: 0vw;
-    font-size: 18px;
   }
 
   .card {
@@ -556,7 +576,7 @@ body {
   /*********Modale & Collapse*********/
   .modal__description {
     margin-top: 70px;
-    font-size: 20px;
+    font-size: 1.2rem;
   }
   .Collapse {
     margin: 10px;
@@ -595,7 +615,7 @@ body {
 
   .imageCount {
     top: 435px;
-    font-size: 18px;
+    font-size: 1.1rem;
   }
 
   /***************Page contact******************/
@@ -614,7 +634,7 @@ body {
   .Footer {
     & p {
       margin: 20px 0;
-      font-size: 20px;
+      font-size: 1rem;
       width: 190px;
       text-align: center;
     }

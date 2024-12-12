@@ -1,3 +1,4 @@
+import SkillCard from "../../components/SkillCard"
 import htmlLogo from "../../assets/htmlLogo.webp"
 import cssLogo from "../../assets/cssLogo.webp"
 import reactLogo from "../../assets/reactLogo.webp"
@@ -5,23 +6,6 @@ import jsLogo from "../../assets/jsLogo.webp"
 import nodeLogo from "../../assets/nodeLogo.webp"
 import expressLogo from "../../assets/expressLogo.webp"
 import mongoLogo from "../../assets/mongoLogo.webp"
-import yellowStar from "../../assets/yellow_star.webp"
-import greyStar from "../../assets/grey_star.webp"
-
-// Composant pour une seule compétence
-const SkillCard = ({ title, logo, level }) => {
-  return (
-    <div className="skill-card">
-      <p className="skill-title">{title}</p>
-      <img src={logo} alt="Skill logo" className="skill-logo" />
-      <div className="stars">
-        {[...Array(5)].map((_, i) => (
-          <img key={i} src={i < level ? yellowStar : greyStar} alt="star" className="star" />
-        ))}
-      </div>
-    </div>
-  )
-}
 
 // Liste des compétences
 const Skills = () => {
@@ -36,13 +20,13 @@ const Skills = () => {
   ]
 
   return (
-    <div className="main">
+    <main className="main">
       <div className="skills-container">
         {skills.map((skill, index) => (
           <SkillCard key={index} title={skill.title} logo={skill.logo} level={skill.level} />
         ))}
       </div>
-    </div>
+    </main>
   )
 }
 

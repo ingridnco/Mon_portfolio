@@ -3,7 +3,6 @@ import Mail from "../../assets/mail.webp"
 
 const Contact = () => {
   return (
-    <>
       <main className="main">
         <div className="contact_text">
           <p>
@@ -16,7 +15,6 @@ const Contact = () => {
           </Link>
         </div>
       </main>
-    </>
   )
 }
 export default Contact

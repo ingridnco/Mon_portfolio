@@ -29,7 +29,7 @@ const Folio = () => {
   }
 
   return (
-    <div className="main flexwrap">
+    <main className="main flexwrap">
       <div className="card__wrapper">
         {cards.map((card, index) => (
           <Card key={index} imgSrc={card.imgSrc} title={card.title} skills={card.skills} description={card.description} onCardClick={() => openModal(card)} />
@@ -89,7 +89,7 @@ const Folio = () => {
           </button>
         </Modal>
       )}
-    </div>
+    </main>
   )
 }
 
