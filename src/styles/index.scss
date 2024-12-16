@@ -387,7 +387,7 @@ body {
   font-weight: 600;
   @include flex-space-between;
   border-radius: 15px;
-  margin: 20px;
+  margin-top: 35px;
   cursor: pointer;
   &__container {
     display: flex;
@@ -520,7 +520,13 @@ body {
     padding: 0px;
     object-position: top;
     left: 0;
-}
+  }
+  imageCount{
+    padding: 8px 10px;
+  }
+  .Collapse{
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 768px) {
