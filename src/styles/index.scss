@@ -472,6 +472,7 @@ body {
   & p {
     font-size: 1.1rem;
     margin: 10px;
+    text-align: center;
   }
 }
 
@@ -511,7 +512,6 @@ body {
   .Header {
     padding: 10px 0;
     width: 100vw; /* ou 100%, pour s'assurer qu'il prend la largeur complète */
-    max-width: none; /* Si max-width est défini ailleurs */
     flex-direction: column;
     align-items: center;
     &__logo {
