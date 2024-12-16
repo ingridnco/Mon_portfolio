@@ -218,15 +218,15 @@ body {
   border-radius: 1rem;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
   padding-bottom: 1rem;
-  width: 25%;
+  min-width: 25%;
   transition: background-image 0.3s ease; // Ajoute une transition fluide
-  max-width: 20em;
+  max-width: 18em;
   text-decoration: none;
   cursor: pointer;
   &__wrapper {
     display: flex;
     justify-content: center;
-    margin: 30px 50px;
+    margin: 30px;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -499,7 +499,6 @@ body {
 
 @media (max-width: 768px) {
   * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
   }

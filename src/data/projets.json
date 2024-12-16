@@ -3,7 +3,7 @@
     "imgSrc": "assets/booki.webp",
     "title": "Booki",
     "description": "Agence de voyage",
-    "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp"],
+    "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp","assets/gitLogo.webp","assets/githubLogo.webp"],
     "pictures": [
   "assets/booki_image1.webp",
   "assets/booki_image2.webp",
@@ -16,7 +16,7 @@
     "imgSrc": "assets/sophie.webp",
     "title": "Sophie Bluel",
     "description": "Site d'architecte",
-    "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp","assets/jsLogo.webp"],
+    "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp","assets/jsLogo.webp","assets/gitLogo.webp","assets/githubLogo.webp"],
     "pictures": [
   "assets/sophie_image1.webp",
   "assets/sophie_image2.webp",
@@ -31,7 +31,7 @@
       "imgSrc": "assets/nina.webp",
       "title": "Nina Carducci",
       "description": "Site de photographe",
-      "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp","assets/jsLogo.webp"],
+      "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp","assets/jsLogo.webp","assets/gitLogo.webp","assets/githubLogo.webp"],
       "pictures": [
     "assets/nina_image1.webp",
     "assets/nina_image2.webp",
@@ -45,7 +45,7 @@
       "imgSrc": "assets/kasa.webp",
       "title": "Kasa",
       "description": "Location de logements",
-      "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp","assets/jsLogo.webp", "assets/reactLogo.webp"],
+      "skills": ["assets/htmlLogo.webp", "assets/cssLogo.webp","assets/jsLogo.webp", "assets/reactLogo.webp","assets/gitLogo.webp","assets/githubLogo.webp"],
       "pictures": [
     "assets/kasa_image1.webp",
     "assets/kasa_image2.webp",
@@ -59,7 +59,7 @@
       "imgSrc": "assets/mvg.webp",
       "title": "Mon Vieux Grimoire",
       "description": "Site de notation de livres",
-      "skills": ["assets/jsLogo.webp","assets/nodeLogo.webp","assets/expressLogo.webp","assets/mongoLogo.webp"],
+      "skills": ["assets/jsLogo.webp","assets/nodeLogo.webp","assets/expressLogo.webp","assets/mongoLogo.webp","assets/gitLogo.webp","assets/githubLogo.webp"],
       "pictures": [
     "assets/mvg_image1.webp",
     "assets/mvg_image2.webp",

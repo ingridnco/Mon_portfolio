@@ -1,6 +1,8 @@
 import SkillCard from "../../components/SkillCard"
 import htmlLogo from "../../assets/htmlLogo.webp"
 import cssLogo from "../../assets/cssLogo.webp"
+import gitLogo from "../../assets/gitLogo.webp"
+import githubLogo from "../../assets/githubLogo.webp"
 import reactLogo from "../../assets/reactLogo.webp"
 import jsLogo from "../../assets/jsLogo.webp"
 import nodeLogo from "../../assets/nodeLogo.webp"
@@ -12,6 +14,8 @@ const Skills = () => {
   const skills = [
     { title: "HTML 5", logo: htmlLogo, level: 5 },
     { title: "CSS 3", logo: cssLogo, level: 5 },
+    { title: "Git", logo: gitLogo, level: 4 },
+    { title: "Github", logo: githubLogo, level: 3},
     { title: "React", logo: reactLogo, level: 4 },
     { title: "JavaScript", logo: jsLogo, level: 3 },
     { title: "Node.js", logo: nodeLogo, level: 3 },
