@@ -2,7 +2,7 @@ import { useState } from "react"
 import BW_arrow from "../../assets/BW_arrow.webp"
 import FW_arrow from "../../assets/FW_arrow.webp"
 
-const SlideShow = ({ pictures }) => {
+const SlideShow = ({ pictures, title }) => {
   const [imageIndex, setImageIndex] = useState(0)
   const totalImages = pictures.length
 
@@ -31,7 +31,7 @@ const SlideShow = ({ pictures }) => {
       <div className="SlideShow__pics">
         <div className="SlideShow__anim" style={SlideShowStyle}>
           {pictures.map((picture, index) => (
-            <img key={`photo-${index}`} className="SlideShow__photo" src={`${process.env.PUBLIC_URL}/${picture}`} alt={`Slide ${index + 1}`} />
+            <img key={`photo-${index}`} className="SlideShow__photo" src={`${process.env.PUBLIC_URL}/${picture}`} alt={`Slide ${index + 1}`} title={`Photos du site ${title}`} />
           ))}
         </div>
         {totalImages > 1 && (

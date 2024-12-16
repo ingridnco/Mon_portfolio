@@ -80,7 +80,7 @@ const Folio = () => {
               Voir le code
             </Link>
           </div>
-          <SlideShow pictures={selectedCard.pictures} />
+          <SlideShow pictures={selectedCard.pictures} title={selectedCard.title} />
           <div className="modal__description">
             <Collapse title="Détails" content={selectedCard.paragraphe} />
           </div>

@@ -3,7 +3,7 @@ import "../../styles/index.scss"
 const Card = ({ imgSrc, title, description, onCardClick, skills }) => {
   return (
     <div className="card" onClick={onCardClick}>
-      <img className="img" src={`${process.env.PUBLIC_URL}/${imgSrc}`} alt={title} />
+      <img className="img" src={`${process.env.PUBLIC_URL}/${imgSrc}`} alt={title}  title={title} />
       <h3>{title}</h3>
       <div className="card__logos">
         {skills.map((skill, index) => (
