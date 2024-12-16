@@ -497,6 +497,32 @@ body {
   }
 }
 
+@media (max-width: 880px) {
+  .SlideShow {
+    width: 100%;
+    top: 17px;
+    left: 0;
+    &__right {
+      right: 0px;
+      height: 418px;
+      top: 0px;
+    }
+    &__left {
+      right: 0px;
+      height: 418px;
+      top: 0px;
+    }
+  }
+  .SlideShow__photo {
+    height: 420px;
+    min-width: 99.78%;
+    object-fit: cover;
+    padding: 0px;
+    object-position: top;
+    left: 0;
+}
+}
+
 @media (max-width: 768px) {
   * {
     padding: 0;
@@ -593,6 +619,8 @@ body {
     object-fit: cover;
     padding: 0px;
     object-position: top;
+    left: 0;
+      
   }
   .SlideShow {
     width: 100%;
